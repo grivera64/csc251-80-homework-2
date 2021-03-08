@@ -139,6 +139,7 @@ int split(int arr[], int lowIndex, int highIndex)
     {
 
       //fill the last EMPTY array slot with the pivot's value
+      //(Shouldn't have a true difference as lowIndex == highIndex)
       if (arr[lowIndex] == EMPTY)
       {
 
