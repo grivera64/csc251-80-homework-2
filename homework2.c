@@ -115,17 +115,18 @@ int split(int arr[], int lowIndex, int highIndex)
     else if (arr[lowIndex] != EMPTY)
     {
       
-      //check if matches pivot,
-      //else, switch and keep same pivot
+      //check if matches pivot
       if (arr[lowIndex] <= pivot)
       {
 
+        //continue
         lowIndex++;
 
       }
       else
       {
 
+        //switch and keep same pivot
         arr[highIndex] = arr[lowIndex];
         highIndex--;
         arr[lowIndex] = (lowIndex >= highIndex) ? pivot : EMPTY;
@@ -137,15 +138,20 @@ int split(int arr[], int lowIndex, int highIndex)
     else
     {
 
-      //fill the empty array with the pivot's value
+      //fill the last EMPTY array slot with the pivot's value
       if (arr[lowIndex] == EMPTY)
       {
+
         arr[lowIndex] = pivot;
+
       }
       else
       {
+
         arr[highIndex] = pivot;
+
       }
+
       break;
     }
 
